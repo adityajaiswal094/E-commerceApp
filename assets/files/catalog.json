@@ -14,7 +14,7 @@
             "desc": "Apple iPhone 12 Pro 12th generation",
             "price": 1099,
             "color": "#33505a",
-            "image": "https://images-na.ssl-images-amazon.com/images/I/71YlH-4MUQL._SL1500_.jpg"
+            "image": "https://i.insider.com/5f89a3dfd260780019341c92"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "desc": "Apple iPad Mini 5th Gen",
             "price": 499,
             "color": "#33505a",
-            "image": "https://www.climaxcomputer.com/wp-content/uploads/2019/05/Apple-iPad-Mini-5.jpg"
+            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-mini-select-cell-spacegray-201911_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&.v=1573825280083"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "desc": "Apple Macbook Air M1 Chip",
             "price": 2199,
             "color": "#33505a",
-            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1603332211000"
+            "image": "https://media.croma.com/image/upload/v1606585888/Croma%20Assets/Computers%20Peripherals/Laptop/Images/9009479057438.png"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "desc": "Apple AirBuds 2nd Gen",
             "price": 399,
             "color": "#33505a",
-            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634795000"
+            "image": "https://ivenus.in/wp-content/uploads/2020/01/MWP22HNA-1-2.png"
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "desc": "Asus Tuf f15 2021 Model",
             "price": 1199,
             "color": "#33505a",
-            "image": "https://i.gadgets360cdn.com/products/large/Asus-TUF-A15-DB-800x800-1591094674.jpg"
+            "image": "https://dlcdnwebimgs.asus.com/gain/6c49e355-de25-403c-b8c2-eb0ad4cc8a78/"
         },
         {
             "id": 7,
@@ -62,7 +62,7 @@
             "desc": "Apple iPhone X 2018 Model",
             "price": 699,
             "color": "#33505a",
-            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-xs-max-gold?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1579299533651"
+            "image": "https://cellbuddy.in/wp-content/uploads/2020/08/IPhone-PNG-Photos.png"
         }
     ]
 }

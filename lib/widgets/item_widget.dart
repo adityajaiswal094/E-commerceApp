@@ -13,7 +13,6 @@ class ItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 3.0),
       child: Card(
-        shape: StadiumBorder(),
         child: ListTile(
           onTap: () {
             print("${items.name} pressed");
@@ -25,7 +24,6 @@ class ItemWidget extends StatelessWidget {
             "\$${items.price.toString()}",
             style: TextStyle(
                 color: Colors.deepPurple, fontWeight: FontWeight.bold),
-            textScaleFactor: 1.2,
           ),
         ),
       ),
