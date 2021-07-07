@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:some_app/models/catalog.dart';
-import 'package:some_app/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:lorem_ipsum/lorem_ipsum.dart';
 
 class HomeDetailPage extends StatelessWidget {
   final Items catalog;
+  final String text = loremIpsum(words: 30);
 
-  const HomeDetailPage({Key key, @required this.catalog})
+  HomeDetailPage({Key key, @required this.catalog})
       : assert(catalog != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyThemes.cream,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: Theme.of(context).canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        padding: EdgeInsets.only(bottom: 10),
+        color: Theme.of(context).cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -38,7 +42,7 @@ class HomeDetailPage extends StatelessWidget {
                   ),
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(MyThemes.darkBlue),
+                        MaterialStateProperty.all(context.theme.buttonColor),
                     shape: MaterialStateProperty.all(StadiumBorder()),
                   )),
             )
@@ -57,13 +61,21 @@ class HomeDetailPage extends StatelessWidget {
             arcType: VxArcType.CONVEY,
             edge: VxEdge.TOP,
             child: Container(
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
               width: context.screenWidth,
               child: Column(
                 children: [
-                  catalog.name.text.xl3.color(MyThemes.darkBlue).bold.make(),
+                  catalog.name.text.xl3.color(context.accentColor).bold.make(),
                   catalog.desc.text.lg.textStyle(context.captionStyle).make(),
                   HeightBox(8),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      text,
+                      style: Theme.of(context).textTheme.caption,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ],
               ).py32(),
             ),
