@@ -66,25 +66,42 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  @override
-  __CartListState createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
+class _CartList extends StatelessWidget {
   final _cart = CartModel();
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: _cart.items?.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: Icon(Icons.done),
-            trailing: IconButton(
-                icon: Icon(Icons.remove_circle_outline), onPressed: () {}),
-            title: Text("${_cart.items[index].name}"),
-          );
-        });
+    return _cart.items.isEmpty
+        ? emptyCart()
+        : ListView.builder(
+            itemCount: _cart.items?.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: Icon(Icons.done),
+                trailing: IconButton(
+                    icon: Icon(Icons.remove_circle_outline),
+                    onPressed: () {
+                      _cart.remove(_cart.items[index]);
+                    }),
+                title: Text("${_cart.items[index].name}"),
+              );
+            });
+  }
+
+  emptyCart() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Your cart is empty!",
+          style: TextStyle(fontSize: 20),
+        ),
+        SizedBox(height: 10),
+        Text(
+          "Add items to it now.",
+          // style: Theme.of(context).textTheme.caption,
+        )
+      ],
+    );
   }
 }

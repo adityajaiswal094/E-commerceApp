@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:some_app/models/catalog.dart';
+import 'package:some_app/widgets/home_widgets/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:lorem_ipsum/lorem_ipsum.dart';
 
@@ -32,20 +33,7 @@ class HomeDetailPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.red[700]),
             ),
-            ConstrainedBox(
-              constraints: BoxConstraints.tightFor(height: 40, width: 80),
-              child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Buy",
-                    style: TextStyle(fontSize: 17),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(context.theme.buttonColor),
-                    shape: MaterialStateProperty.all(StadiumBorder()),
-                  )),
-            )
+            AddToCart(catalog: catalog)
           ],
         ).px12(),
       ),
